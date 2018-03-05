@@ -1,0 +1,55 @@
+.why {
+	max-width: calc(1770px+34%);
+	width: 100%;
+	height: 685px;
+	padding: $side-paddings;
+	text-align: left;
+	background: #3e3d3d url(../images/backwhy.jpg) center no-repeat;
+	background-size: cover;
+	display: flex;
+
+	&__textblock {
+		width: 50%;
+		text-align: left;
+		padding: 10% 10px 10% 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__articlename {
+		font-size: 2.3rem;
+		font-family: 'aleo', Arial, serif;
+		text-transform: capitalize;
+	}
+
+	&__articletext {
+		color: $text-scolor;
+		line-height: 1.6;
+	}
+
+	&__images {
+		margin-left: 7%;
+		margin-top: 10%;
+	}
+
+	&__button {
+		@include btn($back-color);
+		margin-top: 45px;
+ 	}
+
+ 	&__images {
+ 		width: 50%;
+ 	}
+
+ 	&__photohigh {
+		@include imgwhy(url(../images/highwhy.jpg) center no-repeat);
+	}
+
+	&__photolow {
+		@include imgwhy(url(../images/lowwhy.jpg) center no-repeat);
+		position: relative;
+		top: 5px;
+		left: 20%;
+	}
+}

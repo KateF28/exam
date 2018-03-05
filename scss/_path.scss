@@ -1,0 +1,73 @@
+@import "variables";
+@import "mixins";
+
+.path {
+    background: #333333;
+    width: 100%;
+    height: 337px;
+    max-width: calc(1770px+34%);
+    padding: $side-paddings;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__icons {
+        width: 1000px;
+        height: 195px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon {
+    	z-index: 2;
+    }
+
+    &__pathing {
+        border-top: 1px dotted $text-color;
+        border-radius: 50% 50% 0 0;
+        width: 365px;
+        height: 150px;
+        z-index: 1;
+    }
+
+    &__fpathing {
+        position: relative;
+        left: 40px;
+    }
+
+    &__spathing {
+        position: relative;
+        right: 40px;
+    }
+
+    &__ficon {
+        @include imgicon(#333333 url(../images/searchpath.svg) center no-repeat);
+        position: relative;
+        left: 80px;
+    }
+
+    &__sicon {
+        @include imgicon(#333333 url(../images/checkmark.svg) center no-repeat);
+    }
+
+    &__ticon {
+        @include imgicon(#333333 url(../images/okpath.svg) center no-repeat);
+        position: relative;
+        right: 80px;
+    }
+
+    &__iconnames {
+        text-transform: capitalize;
+        text-align: center;
+        color: $text-scolor;
+        font-size: 2.3rem;
+        font-family: 'aleo', Arial, serif;
+        width: 240px;
+        margin: 0;
+        bottom: -80px;
+        left: -70px;
+        display: inline-block;
+        position: relative;
+    }
+}

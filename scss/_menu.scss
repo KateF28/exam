@@ -1,0 +1,56 @@
+  .menu {
+    background-color: $back-color;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: calc(1770px+34%);
+    padding: $side-paddings;
+    text-align: left;
+  
+  &__menulogosvg{
+    width: 156px;
+    height: 20px;
+  }
+
+  &__menufallback {
+    background: url(../images/bhromaon.png);
+    width: 156px;
+    height: 20px;
+  }
+
+  &__menu {
+    text-transform: uppercase;
+    font-family: 'aleo', Arial, serif;
+    font-size: 0.9rem;
+    // display: inline-block;
+    height: 20px;
+  }
+
+  &__menuclause {
+      text-decoration: none;
+      color: $text-color;
+      // padding-top: 7px;
+      // margin: 0;
+      margin-left: 4%;
+
+    &:hover {
+        border-top: 2px solid $text-color;
+        padding-top: 7px;
+        // margin: 0;
+        margin-left: 4%;
+      }
+
+    &:focus {
+      opacity: 0.5;
+    }
+    }
+
+    &__menuwhoclause {
+      margin-left: 0;
+
+      &:hover {
+        margin-left: 0;
+      }
+    }
+}

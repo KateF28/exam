@@ -1,0 +1,143 @@
+@import "variables";
+@import "mixins";
+@import "why";
+@import "menu";
+@import "travel";
+@import "path";
+@import "country";
+@import "contact";
+@import "footer";
+
+@font-face {
+    font-family: 'aleo';
+    src: url('../fonts/aleo-regular-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Josefin Sans', Arial, sans-serif;
+  color: $text-color;
+  font-size: 1em;
+}
+
+.header {
+	max-width: 1770px;
+	width: 100%;
+  height: 100vh;
+	background: #ced0cf url(../images/headerback.jpg) center no-repeat;
+	background-size: cover;
+	  
+  &__center {
+	position: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 13% 0 0 0;
+  height: 90vh;
+  font-size: 0.9rem;
+  }
+
+  &__logoblock {
+    margin-bottom: 50px;
+  }
+
+  &__logosvg{
+    width: 312px;
+    height: 76px;
+  }
+
+  &__fallback {
+    background: url(../images/logo.png);
+    width: 312px;
+    height: 76px;
+  }
+
+  &__searchblock {
+    width: 650px;
+    margin: auto;
+  }
+
+  &__form {
+    text-align: center;
+    position: relative;
+  }
+
+  &__input {
+    margin-bottom: 5%;
+    border-width: 0px;
+    height: 60px;
+    width: 650px;
+    background: $text-color;
+    padding-left: 3%;
+    padding-right: 155px;
+
+
+    &::placeholder {
+    color: #999999;
+    text-align: center;
+    text-transform: capitalize;
+    }
+
+    &:focus {
+    outline: none;
+    font-size: 1rem;
+
+    &::placeholder {
+    color: transparent;
+    }
+    }
+  }
+
+  &__searchbutton {
+    background: $back-color url(../images/search.svg) center no-repeat;
+    background-position: 90%;
+    background-size: 0.9rem;
+    text-transform: uppercase;
+    width: 150px;
+    height: 56px;
+    color: $text-color;
+    font-size: 0.9rem;
+    border-width: 0;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    font-family: 'aleo', Arial, serif;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__skrollblock {
+    margin-top: 5%;
+  }
+
+  &__skrolltext {
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+  }
+
+  &__scroll {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+      opacity: 0.85;
+    }
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
